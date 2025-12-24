@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxy Diary ✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET */
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    /* COLORS */
+    :root {
+      --dark-space: #0a0a2a;
+      --star-yellow: #ffd966;
+      --neon-blue: #3b82f6;
+      --neon-pink: #ff6fa3;
+      --paper: #1a1a3d;
+      --text: #f0f0f5;
+    }
+
+    /* BODY */
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: var(--dark-space);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+      overflow-x: hidden;
+      animation: space-breathe 12s ease-in-out infinite;
+    }
+
+    @keyframes space-breathe {
+      0%,100%{ transform: scale(1); }
+      50% { transform: scale(1.01); }
+    }
+
+    /* GALAXY PAPER */
+    .diary {
+      background: var(--paper);
+      max-width: 850px;
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+      position: relative;
+      transform: rotate(-0.3deg);
+      animation: twitch 6s infinite, drift 14s infinite;
+    }
+
+    @keyframes twitch {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(0.4deg); }
+      50% { transform: rotate(-0.4deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes drift {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+      100% { transform: translateX(0); }
+    }
+
+    /* TITLE */
+    h1 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 3rem;
+      color: var(--neon-blue);
+      text-align: center;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 0 var(--star-yellow);
+      animation: madness 3s infinite alternate;
+    }
+
+    @keyframes madness {
+      from { letter-spacing: 1px; transform: rotate(-1deg); }
+      to { letter-spacing: 6px; transform: rotate(1deg); }
+    }
+
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 40px;
+      color: var(--neon-pink);
+    }
+    /* TEXT */
+    p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px; }
+
+    p:nth-child(odd) { transform: rotate(-0.4deg); }
+    p:nth-child(even) { transform: rotate(0.4deg); }
+
+    /* QUOTE */
+    .quote {
+      background: linear-gradient(135deg, #3b82f6, #ff6fa3);
+      padding: 25px;
+      border-left: 6px solid var(--star-yellow);
+      border-radius: 18px;
+      font-size: 1.2rem;
+      margin: 35px 0;
+      box-shadow: 0 0 40px rgba(255,255,255,0.6);
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow:0 0 10px rgba(255,255,255,0.3); }
+      50% { box-shadow:0 0 45px rgba(255,255,255,0.9); }
+      100% { box-shadow:0 0 10px rgba(255,255,255,0.3); }
+    }
+
+    /* STARS & PLANETS */
+    .stars {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.5);
+      animation: twinkle 5s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      0% { opacity:0.4; transform: translateY(0); }
+      50% { opacity:1; transform: translateY(6px); }
+      100% { opacity:0.4; transform: translateY(0); }
+    }
+
+    /* STICKERS / EMOJIS */
+    .stickers {
+      text-align: center;
+      margin-top: 35px;
+      font-size: 2rem;
+    }
+
+    .stickers span {
+      display: inline-block;
+      margin: 10px;
+      transition: transform .3s ease;
+      cursor: pointer;
+      animation: float 4s infinite ease-in-out;
+    }
+
+    .stickers span:hover { transform: rotate(25deg) scale(1.6); }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 35px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:600px){
+      .diary { padding: 35px 22px; }
+      h1 { font-size: 2.2rem; }
+      .quote { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="diary">
+
+    <div class="stars">✨🌙⭐🪐✨</div>
+
+    <h1>Galaxy Diary 🌌</h1>
+    <div class="subtitle">Adventures of a little cosmic wanderer</div>
+
+    <p>
+      Today I drifted past the rings of a neon planet. The colors were alive,
+      swirling like liquid dreams. My hands itched to touch the starlight,
+      but gravity reminded me to hold on to the notebook.
+    </p>
+
+    <p>
+      Each star seems to whisper secrets, and every comet leaves behind a story
+      only I can read. My spaceship hums softly, almost like it knows my thoughts.
+    </p>
+
+    <div class="quote">
+      “The universe is vast, but my heart carries its tiniest spark.”
+    </div>
+
+    <p>
+      Sometimes I float in silence, watching constellations dance. I feel
+      both infinite and tiny, like a secret tucked inside the folds of space.
+    </p>
+
+    <div class="stickers">
+      <span>🛸</span>
+      <span>🌟</span>
+      <span>🌌</span>
+      <span>🚀</span>
+    </div>
+
+    <footer>
+      Written with starlight, chaos, and a pinch of cosmic madness 😏
+    </footer>
+
+  </div>
+</body>
+</html>
